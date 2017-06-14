@@ -27,18 +27,33 @@
   });
 
 
-
   /** Collapse the navbar when page is scrolled */
   $(window).scroll(function() {
     if ($("#mainNav").offset().top > 700) {
       $("#mainNav").addClass("navbar-shrink");
       $(".logo").attr("src", "img/Logo-Black.svg")
-    } else {
+    } else  {
       $("#mainNav").removeClass("navbar-shrink");
       $(".logo").attr("src", "img/Logo-White.svg")
     }
 
   });
+
+  function updateLogo(){
+    if ($(window).width() < 990) {
+      $(".logo").attr("src", "img/Logo-Black.svg")
+    } else {
+      $(".logo").attr("src", "img/Logo-White.svg")
+    }
+
+  }
+
+
+  /**
+   * Change the Logo based on window size
+   */
+  $(window).resize(updateLogo());
+
 
   // Scroll reveal calls
   window.sr = ScrollReveal();

@@ -124,7 +124,7 @@ body {
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active:hover {
   background-color: transparent; }
 
-@media (min-width: 932px) {
+@media (min-width: 1002px) {
   #mainNav {
     border-color: rgba(255, 255, 255, 0.3);
     background-color: transparent; }
