@@ -1,4 +1,7 @@
 // Styling for the navbar
+
+$min-width: 932px;
+
 #mainNav {
     border-color: fade-out($gray-darker, .95);
     background-color: white;
@@ -41,7 +44,7 @@
             }
         }
     }
-    @media (min-width: 992px) {
+    @media (min-width: $min-width) {
         border-color: fade-out(white, .7);
         background-color: transparent;
         .navbar-brand {
@@ -77,5 +80,9 @@
                 }
             }
         }
+    }
+    .logo {
+      width: 250px;
+      height: 40px
     }
 }

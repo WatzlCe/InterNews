@@ -124,7 +124,7 @@ body {
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active:hover {
   background-color: transparent; }
 
-@media (min-width: 992px) {
+@media (min-width: 932px) {
   #mainNav {
     border-color: rgba(255, 255, 255, 0.3);
     background-color: transparent; }
@@ -152,6 +152,10 @@ body {
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover,
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover {
     color: #61b8e8; } }
+
+#mainNav .logo {
+  width: 250px;
+  height: 40px; }
 
 header.masthead {
   position: relative;
