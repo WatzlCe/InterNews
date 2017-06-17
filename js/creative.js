@@ -1,18 +1,20 @@
 /// <reference path="../typings/globals/jquery/index.d.ts"/>
 
 
-window.addEventListener("resize", function(){
+window.addEventListener("resize", function () {
   console.log($(document).width());
 });
 
 
 
 
-(function($) {
+(function ($) {
   "use strict"; // Start of use strict
 
+
+
   // Smooth scrolling using jQuery easing
-  $('a[href*="#"]:not([href="#"])').click(function() {
+  $('a[href*="#"]:not([href="#"])').click(function () {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -32,33 +34,34 @@ window.addEventListener("resize", function(){
   });
 
   // Closes responsive menu when a link is clicked
-  $('.navbar-collapse>ul>li>a').click(function() {
+  $('.navbar-collapse>ul>li>a').click(function () {
     $('.navbar-collapse').collapse('hide');
   });
 
 
   /** Collapse the navbar when page is scrolled */
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($("#mainNav").offset().top < 700) {
       $("#mainNav").removeClass("navbar-shrink");
-      $(".logo").attr("src", "img/Logo-White.svg")
-    } 
-    else  {
+    } else {
       $("#mainNav").addClass("navbar-shrink");
-      $(".logo").attr("src", "img/Logo-Black.svg")
     }
 
+    updateLogo();
   });
 
-  function updateLogo(){
-    if ($(window).width() < 990) {
+/**Update the logo when page is loaded */
+  updateLogo();
+
+  /**Updates the logo dependend on with or offset */
+  function updateLogo() {
+    if ($(window).width() < 990 || $("#mainNav").offset().top >= 700) {
       $(".logo").attr("src", "img/Logo-Black.svg")
     } else {
       $(".logo").attr("src", "img/Logo-White.svg")
     }
 
   }
-
 
   /**
    * Change the Logo based on window size
