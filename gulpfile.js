@@ -6,7 +6,8 @@ var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
-var plumber = require('gulp-plumber');
+var plumber = require( 'gulp-plumber' );
+
 
 // Set the banner content
 var banner = ['/*!\n',
@@ -104,11 +105,11 @@ gulp.task('default', ['sass', 'minify-css', 'minify-js', 'copy']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {
-    browserSync.init({
+    browserSync.init( {
         server: {
-            baseDir: ''
+            baseDir: './',
         },
-    })
+    } );
 })
 
 // Dev task with browserSync
