@@ -47,9 +47,9 @@
   /**Updates the logo dependend on with or offset */
   function updateLogo() {
     if ( $( window ).width() < 990 || $( "#mainNav" ).offset().top >= 700 ) {
-      $( ".logo" ).attr( "src", "img/Logo-Black.svg" );
+      $( ".logo" ).attr( "src", "img/InterNews-Logo.svg" );
     } else {
-      $( ".logo" ).attr( "src", "img/Logo-White.svg" );
+      $( ".logo" ).attr( "src", "img/InterNews-Logo-White.svg" );
     }
 
   }
