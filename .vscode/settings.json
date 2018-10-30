@@ -1,4 +1,14 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-    "javascript.implicitProjectConfig.checkJs": true
+    "javascript.implicitProjectConfig.checkJs": true,
+    "spellright.language": [
+        "de",
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext",
+        "javascript"
+    ]
 }
